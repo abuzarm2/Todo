@@ -1,5 +1,3 @@
-Certainly! Below is a `README.md` template for your Flask project with a CRUD application:
-
 ```markdown
 # Flask Todo App
 
