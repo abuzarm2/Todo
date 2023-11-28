@@ -9,10 +9,12 @@ class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
 
+# 
 @app.route('/')
 def index():
     todos = Todo.query.all()
     return render_template('index.html', todos=todos)
+
 
 @app.route('/add', methods=['POST'])
 def add():
@@ -21,6 +23,7 @@ def add():
     db.session.add(new_todo)
     db.session.commit()
     return redirect(url_for('index'))
+
 
 @app.route('/update/<int:id>', methods=['GET', 'POST'])
 def update(id):
