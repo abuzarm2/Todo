@@ -67,5 +67,3 @@ If you'd like to contribute to this project, please follow the [Contributing Gui
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 ```
-
-Remember to customize the placeholders like `[Flask Todo App]`, `[http://localhost:5000/]`, and others based on your specific project details. Additionally, consider including a `LICENSE.md` file with the appropriate license for your project.

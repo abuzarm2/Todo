@@ -9,13 +9,13 @@ class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(200), nullable=False)
 
-# 
+# to read or fetch data from database
 @app.route('/')
 def index():
     todos = Todo.query.all()
     return render_template('index.html', todos=todos)
 
-
+# to add objects | the id is generated automatically
 @app.route('/add', methods=['POST'])
 def add():
     content = request.form['content']
@@ -24,7 +24,7 @@ def add():
     db.session.commit()
     return redirect(url_for('index'))
 
-
+# to update objects | sends id to update
 @app.route('/update/<int:id>', methods=['GET', 'POST'])
 def update(id):
     todo = Todo.query.get(id)
@@ -36,6 +36,7 @@ def update(id):
 
     return render_template('update.html', todo=todo)
 
+# uses id to delete object
 @app.route('/delete/<int:id>')
 def delete(id):
     todo_to_delete = Todo.query.get(id)
