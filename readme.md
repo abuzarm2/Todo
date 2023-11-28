@@ -1,4 +1,3 @@
-```markdown
 # Flask Todo App
 
 This is a simple Flask web application implementing a CRUD (Create, Read, Update, Delete) functionality for managing todos. The application uses SQLAlchemy for database interaction and provides a basic web interface.
@@ -66,4 +65,3 @@ If you'd like to contribute to this project, please follow the [Contributing Gui
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-```
