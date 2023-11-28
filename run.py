@@ -1,3 +1,4 @@
+from datetime import datetime
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
@@ -13,7 +14,8 @@ class Todo(db.Model):
 @app.route('/')
 def index():
     todos = Todo.query.all()
-    return render_template('index.html', todos=todos)
+    current_datetime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    return render_template('index.html', todos=todos, current_datetime=current_datetime)
 
 # to add objects | the id is generated automatically
 @app.route('/add', methods=['POST'])
